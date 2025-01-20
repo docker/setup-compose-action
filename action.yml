@@ -1,0 +1,21 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+name: 'Docker Setup Compose'
+description: 'Set up Docker Compose'
+author: 'docker'
+branding:
+  icon: 'anchor'
+  color: 'blue'
+
+inputs:
+  version:
+    description: 'Compose version. (eg. v2.32.4)'
+    required: false
+  cache-binary:
+    description: 'Cache compose binary to GitHub Actions cache backend'
+    default: 'true'
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+  post: 'dist/index.js'
