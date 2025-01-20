@@ -1,0 +1,86 @@
+name: ci
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  push:
+    branches:
+      - 'main'
+      - 'releases/v*'
+    tags:
+      - 'v*'
+  pull_request:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        compose-version:
+          - ""
+          - "latest"
+          - "v2.32.4"
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Set up Docker Compose
+        uses: ./
+        with:
+          version: ${{ matrix.compose-version }}
+
+  multi:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Set up Docker Compose 1
+        uses: ./
+      -
+        name: Set up Docker Compose 2
+        uses: ./
+
+  standalone:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Uninstall docker cli
+        run: |
+          if dpkg -s "docker-ce" >/dev/null 2>&1; then
+            sudo dpkg -r --force-depends docker-ce-cli docker-compose-plugin
+          else
+            sudo apt-get purge -y moby-cli moby-compose
+          fi
+      -
+        name: Set up Docker Compose
+        uses: ./
+
+  cache-binary:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        cache:
+          - true
+          - false
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Set up Docker Compose
+        uses: ./
+        with:
+          version: v2.31.0
+          cache-binary: ${{ matrix.cache }}
