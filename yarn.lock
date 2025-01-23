@@ -1090,9 +1090,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docker/actions-toolkit@npm:^0.52.0":
-  version: 0.52.0
-  resolution: "@docker/actions-toolkit@npm:0.52.0"
+"@docker/actions-toolkit@npm:^0.53.0":
+  version: 0.53.0
+  resolution: "@docker/actions-toolkit@npm:0.53.0"
   dependencies:
     "@actions/artifact": ^2.2.1
     "@actions/cache": ^4.0.0
@@ -1115,7 +1115,7 @@ __metadata:
     semver: ^7.6.3
     tar-stream: ^3.1.7
     tmp: ^0.2.3
-  checksum: f2ab4eb6c4cd37f9977c62c154a8fabadc8a148e70fad40d53003b312063455ed79fa59038207fb879c60d6532ea6a24e11e53a4594eddb474cac40b4eb13306
+  checksum: 9b14d8e0d17cbf52a38e66e85c1d04f599a64633aaaac550f9dcbed51567f7cc2c36ad2c748884fecf3355f25dc05b783e500e621014f43348a776f5433de927
   languageName: node
   linkType: hard
 
@@ -3166,7 +3166,7 @@ __metadata:
   resolution: "docker-setup-compose@workspace:."
   dependencies:
     "@actions/core": ^1.11.1
-    "@docker/actions-toolkit": ^0.52.0
+    "@docker/actions-toolkit": ^0.53.0
     "@types/node": ^20.12.12
     "@typescript-eslint/eslint-plugin": ^7.9.0
     "@typescript-eslint/parser": ^7.9.0
