@@ -11,6 +11,9 @@ on:
       - 'releases/v*'
   pull_request:
 
+env:
+  SETUP_BUILDX_VERSION: "edge"
+
 jobs:
   prepare:
     runs-on: ubuntu-latest
@@ -36,6 +39,12 @@ jobs:
       matrix:
         target: ${{ fromJson(needs.prepare.outputs.targets) }}
     steps:
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          version: ${{ env.SETUP_BUILDX_VERSION }}
+          driver: docker
       -
         name: Validate
         uses: docker/bake-action@v6
