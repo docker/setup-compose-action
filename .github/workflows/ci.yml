@@ -25,6 +25,8 @@ jobs:
           - ""
           - "latest"
           - "v2.32.4"
+          - "cloud:latest"
+          - "cloud:v2.29.1-desktop.2"
     steps:
       -
         name: Checkout
