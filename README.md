@@ -1,7 +1,7 @@
 [![GitHub release](https://img.shields.io/github/release/docker/setup-compose-action.svg?style=flat-square)](https://github.com/docker/setup-compose-action/releases/latest)
 [![GitHub marketplace](https://img.shields.io/badge/marketplace-docker--setup--compose-blue?logo=github&style=flat-square)](https://github.com/marketplace/actions/docker-setup-compose)
-[![CI workflow](https://img.shields.io/github/actions/workflow/status/docker/setup-compose-action/ci.yml?branch=master&label=ci&logo=github&style=flat-square)](https://github.com/docker/setup-compose-action/actions?workflow=ci)
-[![Test workflow](https://img.shields.io/github/actions/workflow/status/docker/setup-compose-action/test.yml?branch=master&label=test&logo=github&style=flat-square)](https://github.com/docker/setup-compose-action/actions?workflow=test)
+[![CI workflow](https://img.shields.io/github/actions/workflow/status/docker/setup-compose-action/ci.yml?label=ci&logo=github&style=flat-square)](https://github.com/docker/setup-compose-action/actions?workflow=ci)
+[![Test workflow](https://img.shields.io/github/actions/workflow/status/docker/setup-compose-action/test.yml?label=test&logo=github&style=flat-square)](https://github.com/docker/setup-compose-action/actions?workflow=test)
 [![Codecov](https://img.shields.io/codecov/c/github/docker/setup-compose-action?logo=codecov&style=flat-square)](https://codecov.io/gh/docker/setup-compose-action)
 
 ## About
