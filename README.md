@@ -30,11 +30,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Checkout
-        uses: actions/checkout@v4
+        name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+```
+
+> [!NOTE]
+> If Docker Compose is already installed on the runner, the action will skip
+> download. Otherwise, it will download and install the latest stable version
+> [available on GitHub](https://github.com/docker/compose/releases/latest).
+
+To always download and install the latest version of Docker Compose:
+
+```yaml
       -
         name: Set up Docker Compose
         uses: docker/setup-compose-action@v1
+        with:
+          version: latest
 ```
 
 ## Customizing
