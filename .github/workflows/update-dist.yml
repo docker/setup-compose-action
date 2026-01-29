@@ -1,0 +1,35 @@
+name: update-dist
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  prepare:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    outputs:
+      token: ${{ steps.docker-read-app.outputs.token }}
+    steps:
+      -
+        name: GitHub auth token from GitHub App
+        id: docker-read-app
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.GHACTIONS_REPO_WRITE_APP_ID }}
+          private-key: ${{ secrets.GHACTIONS_REPO_WRITE_APP_PRIVATE_KEY }}
+          owner: docker
+
+  update-dist:
+    if: github.actor == 'dependabot[bot]'
+    uses: docker/actions-toolkit/.github/workflows/action-dist-update.yml@action-dist-update
+    needs:
+      - prepare
+    permissions:
+      contents: write
+    with:
+      target: build
+    secrets:
+      github-token: ${{ needs.prepare.outputs.token }}
