@@ -1,10 +1,10 @@
 import * as core from '@actions/core';
 import * as actionsToolkit from '@docker/actions-toolkit';
 
-import {Docker} from '@docker/actions-toolkit/lib/docker/docker';
-import {Toolkit} from '@docker/actions-toolkit/lib/toolkit';
+import {Docker} from '@docker/actions-toolkit/lib/docker/docker.js';
+import {Toolkit} from '@docker/actions-toolkit/lib/toolkit.js';
 
-import * as context from './context';
+import * as context from './context.js';
 
 actionsToolkit.run(
   // main
