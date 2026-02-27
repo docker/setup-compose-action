@@ -3,9 +3,9 @@ import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
 
-import {Context} from '@docker/actions-toolkit/lib/context';
+import {Context} from '@docker/actions-toolkit/lib/context.js';
 
-import * as context from '../src/context';
+import * as context from '../src/context.js';
 
 const tmpDir = fs.mkdtempSync(path.join(process.env.TEMP || os.tmpdir(), 'context-'));
 const tmpName = path.join(tmpDir, '.tmpname-vi');
