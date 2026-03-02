@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'docker-actions-toolkit-'));
+const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'docker-setup-compose-action-'));
 
 process.env = Object.assign({}, process.env, {
   TEMP: tmpDir,

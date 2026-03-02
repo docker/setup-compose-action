@@ -32,7 +32,7 @@ describe('getInputs', () => {
   });
 
   // prettier-ignore
-  test.each([
+  const cases: [number, Map<string, string>, context.Inputs][] = [
     [
       0,
       new Map<string, string>([
@@ -41,7 +41,7 @@ describe('getInputs', () => {
       {
         version: '',
         cacheBinary: true,
-      } as context.Inputs
+      }
     ],
     [
       1,
@@ -52,18 +52,16 @@ describe('getInputs', () => {
       {
         version: 'v2.32.4',
         cacheBinary: false
-      } as context.Inputs
+      }
     ]
-  ])(
-    '[%d] given %p as inputs, returns %p',
-    async (num: number, inputs: Map<string, string>, expected: context.Inputs) => {
-      inputs.forEach((value: string, name: string) => {
-        setInput(name, value);
-      });
-      const res = await context.getInputs();
-      expect(res).toEqual(expected);
-    }
-  );
+  ];
+  test.each(cases)('[%d] given %o as inputs, returns %o', async (num: number, inputs: Map<string, string>, expected: context.Inputs) => {
+    inputs.forEach((value: string, name: string) => {
+      setInput(name, value);
+    });
+    const res = await context.getInputs();
+    expect(res).toEqual(expected);
+  });
 });
 
 // See: https://github.com/actions/toolkit/blob/master/packages/core/src/core.ts#L67
