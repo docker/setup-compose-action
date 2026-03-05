@@ -31,7 +31,7 @@ jobs:
     steps:
       -
         name: Set up Docker Compose
-        uses: docker/setup-compose-action@v1
+        uses: docker/setup-compose-action@v2
 ```
 
 > [!NOTE]
@@ -44,7 +44,7 @@ To always download and install the latest version of Docker Compose:
 ```yaml
       -
         name: Set up Docker Compose
-        uses: docker/setup-compose-action@v1
+        uses: docker/setup-compose-action@v2
         with:
           version: latest
 ```
