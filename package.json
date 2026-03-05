@@ -4,7 +4,7 @@
   "type": "module",
   "main": "src/main.ts",
   "scripts": {
-    "build": "ncc build --source-map --minify --license licenses.txt",
+    "build": "esbuild src/main.ts --bundle --platform=node --format=cjs --target=node24 --sourcemap --minify --outfile=dist/index.cjs",
     "lint": "eslint --max-warnings=0 .",
     "format": "eslint --fix .",
     "test": "vitest run"
@@ -30,9 +30,9 @@
     "@types/node": "^24.11.0",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
-    "@vercel/ncc": "^0.38.4",
     "@vitest/coverage-v8": "^4.0.18",
     "@vitest/eslint-plugin": "^1.6.9",
+    "esbuild": "^0.27.0",
     "eslint": "^9.39.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
