@@ -30,7 +30,7 @@ jobs:
           driver: docker
       -
         name: Test
-        uses: docker/bake-action@v6
+        uses: docker/bake-action@v7
         with:
           source: .
           targets: test
