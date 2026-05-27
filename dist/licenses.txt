@@ -1813,7 +1813,6 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 The following npm packages may be included in this product:
 
- - jackspeak@2.3.6
  - lru-cache@11.2.6
  - minipass@7.1.3
  - path-scurry@1.11.1
@@ -1879,11 +1878,12 @@ software or this license, under any kind of legal claim.***
 
 -----------
 
-The following npm package may be included in this product:
+The following npm packages may be included in this product:
 
+ - jackspeak@3.4.3
  - minimatch@10.2.4
 
-This package contains the following license:
+These packages each contain the following license:
 
 # Blue Oak Model License
 
@@ -2312,11 +2312,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -----------
 
-The following npm package may be included in this product:
+The following npm packages may be included in this product:
 
  - glob@13.0.6
+ - package-json-from-dist@1.0.1
 
-This package contains the following license:
+These packages each contain the following license:
 
 All packages under `src/` are licensed according to the terms in
 their respective `LICENSE` or `LICENSE.md` files.
@@ -3400,6 +3401,7 @@ The following npm packages may be included in this product:
 
  - brace-expansion@1.1.11
  - brace-expansion@2.0.1
+ - brace-expansion@2.1.1
 
 These packages each contain the following license:
 
@@ -4083,7 +4085,7 @@ IN THE SOFTWARE.
 
 The following npm package may be included in this product:
 
- - glob@10.3.15
+ - glob@10.5.0
 
 This package contains the following license:
 
@@ -4156,7 +4158,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 The following npm packages may be included in this product:
 
  - minimatch@5.1.6
- - minimatch@9.0.4
+ - minimatch@9.0.9
 
 These packages each contain the following license:
 
