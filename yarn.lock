@@ -977,6 +977,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nodable/entities@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@nodable/entities@npm:2.1.0"
+  checksum: 10/355c55e82aebe45d4b962d16530951df51e19e3e63a27ea61ad3260c0807064619b270b9c83db10e8394f42760abd5b7f7c5b5117678c4246ce8364a4aafc637
+  languageName: node
+  linkType: hard
+
 "@npmcli/agent@npm:^2.0.0":
   version: 2.2.2
   resolution: "@npmcli/agent@npm:2.2.2"
@@ -3175,7 +3182,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-builder@npm:^1.0.0":
+"fast-xml-builder@npm:^1.2.0":
   version: 1.2.0
   resolution: "fast-xml-builder@npm:1.2.0"
   dependencies:
@@ -3186,14 +3193,17 @@ __metadata:
   linkType: hard
 
 "fast-xml-parser@npm:^5.0.7":
-  version: 5.4.1
-  resolution: "fast-xml-parser@npm:5.4.1"
+  version: 5.8.0
+  resolution: "fast-xml-parser@npm:5.8.0"
   dependencies:
-    fast-xml-builder: "npm:^1.0.0"
-    strnum: "npm:^2.1.2"
+    "@nodable/entities": "npm:^2.1.0"
+    fast-xml-builder: "npm:^1.2.0"
+    path-expression-matcher: "npm:^1.5.0"
+    strnum: "npm:^2.3.0"
+    xml-naming: "npm:^0.1.0"
   bin:
     fxparser: src/cli/cli.js
-  checksum: 10/2b40067c3ad3542ca197d1353bcb0416cd5db20d5c66d74ac176b99af6ff9bd55a6182d36856a2fd477c95b8fc1f07405475f1662a31185480130ba7076c702a
+  checksum: 10/0167d17d5275c95e005639f8fca7b4d88fec3fd013063725280f4e982313b1c798e4565d5ced7f61ce10e8f0d876a1976492cc8ac27da3080915ff549fd00705
   languageName: node
   linkType: hard
 
@@ -5353,10 +5363,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strnum@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "strnum@npm:2.1.2"
-  checksum: 10/7d894dff385e3a5c5b29c012cf0a7ea7962a92c6a299383c3d6db945ad2b6f3e770511356a9774dbd54444c56af1dc7c435dad6466c47293c48173274dd6c631
+"strnum@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "strnum@npm:2.3.0"
+  checksum: 10/ce79c86bb2b96f053eb28e14924c13604e22977dcdece9aa914c25e16cc5c4bbe048976fe0b2a4decf08a1e13600b820749cea25463fc0e5fee3078339e0a457
   languageName: node
   linkType: hard
 
